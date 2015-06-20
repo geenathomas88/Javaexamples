@@ -70,6 +70,7 @@ class Animal{
 	}
 }
 
+
 class Human{
 	int yob;
 	int age;
