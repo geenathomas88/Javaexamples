@@ -1,3 +1,4 @@
+package excercises;
 
 public class FibanocciNumber {
 	public static void main(String args[]){

@@ -1,3 +1,4 @@
+package excercises;
 
 public class PatternPrint {
 	public static void main(String args[]){

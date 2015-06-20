@@ -1,3 +1,4 @@
+package excercises;
 //Print multiplication table of 6
 public class MultiplicationTable {
 	public static void main(String args[]){
