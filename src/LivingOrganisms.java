@@ -22,7 +22,7 @@ public class LivingOrganisms {
 		
 		System.out.println("------------------");
 		
-		Human human = new Human();
+		Humans human = new Humans();
 		human.name = "Geena";
 		human.gender = 'f';
 		human.yob = 1988;
@@ -71,7 +71,7 @@ class Animal{
 }
 
 
-class Human{
+class Humans{
 	int yob;
 	int age;
 	String name;

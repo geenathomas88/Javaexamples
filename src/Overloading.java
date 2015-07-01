@@ -115,6 +115,17 @@ public class Overloading {
 		System.out.println(c);
 	}
 	
+	public static void stringAdd(String a, String b){
+		
+		String c = a+b;
+		System.out.println(c);
+	}
+	
+	public static void stringAddition(String a, String b, String c){
+		
+		String d = a+b+c;
+		System.out.println(d);
+	}
 	public static void main(String args[]){
 		add(1,2);
 		add(5,2.3f);
@@ -135,5 +146,7 @@ public class Overloading {
 		divide(5.5f,1.1f);
 		divide(36.67,89.65);
 		divide(98.56,4.6f);
+		stringAdd("Hello ", "World");
+		stringAddition("Hello,", "How are you", "?");
 	}
 }
