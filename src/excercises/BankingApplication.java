@@ -2,13 +2,14 @@ package excercises;
 
 public class BankingApplication {
 	public static void main(String args[]){
-		
+		HDFC hdfc = new HDFC();
+		ICICI icici = new ICICI();
 	}
 }
 interface Account {
 	int accNo = 00;
 	String name = "";
-	public float balance = 0.0f;
+	//public float balance = 0.0f;
 	
 	void createAccount();
 	public float getBalance();
@@ -79,14 +80,14 @@ abstract class ICICIAccount implements ICICISavings,ICICICurrent,ICICICreditCard
 
 
 class HDFC extends HDFCAccount{
-
+	float balance;
 	public void createAccount() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public float deposit() {
-		balance = balance+amount;
+	public float deposit(float a) {
+		balance = balance+a;
 		return balance;
 	}
 
@@ -125,11 +126,6 @@ class HDFC extends HDFCAccount{
 		return 0;
 	}
 
-	public float deposit(float amount) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 	public float withDraw(float amount) {
 		// TODO Auto-generated method stub
 		return 0;
@@ -148,7 +144,7 @@ class HDFC extends HDFCAccount{
 
 
 class ICICI extends ICICIAccount{
-
+	float balance;
 	public void createAccount() {
 		// TODO Auto-generated method stub
 		String name;
@@ -195,9 +191,9 @@ class ICICI extends ICICIAccount{
 		return accNo;
 	}
 
-	public float deposit(float amount) {
+	public float deposit(float a) {
 		// TODO Auto-generated method stub
-		balance = balance +amount;
+		balance = balance +a;
 		return balance;
 	}
 
