@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Iterator;
 
 
@@ -48,7 +49,11 @@ public class ArrayListExample {
 		String[] array = arraylist.toArray(new String[arraylist.size()]);//converting to array
 		System.out.println("Array craeted : "+Arrays.toString(array));
 		
+		Collections.sort(arraylist);
+		System.out.println(arraylist);
+		
 		arraylist.clear();
 		System.out.println("Aftter calling clear method : "+arraylist);
+		
 	}
 }

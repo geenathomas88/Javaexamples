@@ -1,7 +1,6 @@
 package excercises;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 
 public class ArrayListProblem {

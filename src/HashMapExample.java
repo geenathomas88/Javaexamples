@@ -1,9 +1,8 @@
-import java.util.Collection;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
-
-import com.sun.javafx.collections.MappingChange.Map;
-
 
 public class HashMapExample {
 
@@ -44,37 +43,31 @@ public class HashMapExample {
 			System.out.println("Value found");
 		}
 		
-		for(String mykey : hash.keySet()){	
+		System.out.println(hash.getOrDefault("monkey", -1));//get or default 
+		System.out.println(hash.getOrDefault("cat", -1));
+		
+		hash.putIfAbsent("monkey", 5);// put if the key is absent
+		hash.putIfAbsent("monkey", 6);
+		System.out.println("After monkey added at position "+ hash.get("monkey"));
+			
+		Set<String> set = hash.keySet();//get keys
+		ArrayList<String> al = new ArrayList<String>();//a new arraylist
+		al.addAll(set);//add keys to arraylist
+		Collections.sort(al);//sort
+		
+		for(String key : al){
+			System.out.println(key + " : " + hash.get(key));
+		}
+		
+		for(String mykey : hash.keySet()){	//search for key
 			if(hash.get(mykey) == 3)
 			System.out.println(mykey);
 		}
-		java.util.Map<Integer, String> myhash = new HashMap<Integer, String>();
 		
-		Student s1 = new Student(1, "Student1", "A", 90);
-		Student s2 = new Student(3, "Student3", "B", 80);
-		Student s3 = new Student(2, "Student2", "C", 70);
+		System.out.println("Using map.entry");
+		for(Map.Entry m:hash.entrySet()){//using Map.Entry
+			System.out.println(m);
+		}
 		
-		myhash.put(s1.id,s1.name);
-		myhash.put(s2.id,s2.name);
-		myhash.put(s3.id,s3.name);
-		
-		System.out.println(myhash.entrySet());
-		
-		System.out.println(myhash);
-	}
-	
-	
-	 
-}
-class Student{
-	int id;
-	String name,grade;
-	float marks;
-	public Student(int id, String name, String grade, float marks) {
-		this.id = id;
-		this.name = name;
-		this.grade = grade;
-		this.marks = marks;
-	}
-	
+	}	 
 }

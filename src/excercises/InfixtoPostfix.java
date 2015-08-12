@@ -1,5 +1,7 @@
 package excercises;
 
+import java.util.Scanner;
+
 
 
 //import java.util.Stack;
@@ -8,6 +10,15 @@ public class InfixtoPostfix {
 
 	private MyStack stack;
 	private String input;
+	
+	Scanner scanner = new Scanner(System.in);
+	public void getInput(){
+		while(scanner.hasNext()){
+			if(scanner.next()== ""){}
+			System.out.print(scanner.next());	
+		}
+		
+	}
 	
 	public InfixtoPostfix(String s) {
 		input =s;
@@ -21,6 +32,7 @@ public class InfixtoPostfix {
 		}
 	}
 	public static void main(String args[]){
-		
+		InfixtoPostfix in = new InfixtoPostfix("Hi");
+		in.getInput();
 	}
 }

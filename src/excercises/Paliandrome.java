@@ -1,3 +1,4 @@
+//check if input is paliandrome.
 package excercises;
 
 public class Paliandrome {
